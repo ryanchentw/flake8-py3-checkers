@@ -1,9 +1,5 @@
 import setuptools
 
-requires = [
-    "flake8 > 3.0.0",
-]
-
 setuptools.setup(
     name="flake8_py3_checkers",
     license="MIT",
@@ -12,14 +8,11 @@ setuptools.setup(
     author="Ryan",
     author_email="ryan.chen@pinkoi.com",
     url='',
-    packages=[
-        "flake8_py3_checkers",
-    ],
-    install_requires=requires,
+    install_requires=['setuptools'],
     py_modules=['flake8_py3_checkers'],
     entry_points={
         'flake8.extension': [
-            'PY3001 = flake8_py3_checkers:UnicodeFunctionCallChecker',
+            'S01 = flake8_py3_checkers:UnicodeFunctionCallChecker',
         ],
     },
     classifiers=[

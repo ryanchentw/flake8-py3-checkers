@@ -35,3 +35,8 @@ class UnicodeFunctionCallChecker(object):
                     '[PY3 Compat.] Found unicode function call',
                     type(self),
                 )
+
+if __name__ == '__main__':
+    with open('/home/ryan/pinkoi/pinkoi/models/Seven.py', 'r') as f:
+        for i in UnicodeFunctionCallChecker(ast.parse(f.read()), '123').run():
+            print(i)
